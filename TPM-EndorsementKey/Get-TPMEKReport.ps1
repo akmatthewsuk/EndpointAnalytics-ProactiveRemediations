@@ -17,7 +17,7 @@ $ResultsRetrieved = 0
 do {
     If ($ResultsRetrieved -eq 0) {
         #Set the 'TPM EK URL for the first run
-        $TPMInvokeURL = 'deviceManagement/deviceHealthScripts/3a16c085-fdd4-4ac6-a11e-7e8d7c98c027/deviceRunStates?'
+        $TPMInvokeURL = 'deviceManagement/deviceHealthScripts/<guid>/deviceRunStates?'
     }
     #Retrieve the results
     $TPMEKResults = Invoke-MSGraphRequest -HttpMethod GET -Url $TPMInvokeURL
