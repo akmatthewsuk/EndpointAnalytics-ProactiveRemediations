@@ -1,0 +1,63 @@
+<Config>
+    <!--     Main Routine Configuration  -->
+    <CommonPath>C:\Program Files\Deploy\Common</CommonPath>
+    <AppPath>C:\Program Files\Deploy\UpdateNotification</AppPath>
+    <MSI>Update_Toast-1-0.msi</MSI>
+    <Marker>UpdateNotification1.3.tag</Marker>
+    <Scripts>
+        <ScriptsSecure>Secure</ScriptsSecure>
+        <ScriptsUser>User</ScriptsUser>
+        <ScriptsCommonSecure>Secure</ScriptsCommonSecure>
+        <ScriptsCommonUser>User</ScriptsCommonUser>
+    </Scripts>
+    <Tasks>
+        <Task>
+            <ID>DeployToast</ID>
+            <TaskName>User-Update-ToastNotify</TaskName>
+            <TaskType>User</TaskType>
+            <TaskScriptFolder>UpdateToastNotify</TaskScriptFolder>
+            <TaskScript>ToastNotify.vbs</TaskScript>
+            <TaskConfig></TaskConfig>
+            <TaskArgument></TaskArgument>
+            <TaskExecutable>wscript</TaskExecutable>
+            <TaskRun>
+                <Run>
+                    <RunType>Daily</RunType>
+                    <RunTime>8:30am</RunTime>
+                </Run>
+                <Run>
+                    <RunType>Daily</RunType>
+                    <RunTime>10:30am</RunTime>
+                </Run>
+                <Run>
+                    <RunType>Daily</RunType>
+                    <RunTime>12:30pm</RunTime>
+                </Run>
+                <Run>
+                    <RunType>Daily</RunType>
+                    <RunTime>2:30pm</RunTime>
+                </Run>
+                <Run>
+                    <RunType>Daily</RunType>
+                    <RunTime>4:30pm</RunTime>
+                </Run>
+                <Run>
+                    <RunType>Daily</RunType>
+                    <RunTime>6:30pm</RunTime>
+                </Run>
+            </TaskRun>
+            <TaskPrincipal>User</TaskPrincipal>
+            <StartImmediately>No</StartImmediately>
+        </Task>    
+    </Tasks>
+    <Toast>
+        <Protocols>
+            <Protocol>
+                <ID>RebootNow</ID>
+                <Key>HKCR:\RebootNow</Key>
+                <Default>URL:RebootNow</Default>
+                <Action>c:\windows\system32\shutdown.exe /r /t 120 /d p:0:0 /c "Toast Notification Reboot"</Action>
+            </Protocol>
+        </Protocols>
+    </Toast>
+</Config>

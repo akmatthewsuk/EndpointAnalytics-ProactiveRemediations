@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toast>
+    <ToastRegistryKey>\Software\Deploy\UpdateToast</ToastRegistryKey>
+    <ToastRegistryAction>ToastAction</ToastRegistryAction>
+    <ToastRegistryReboot>ToastReboot</ToastRegistryReboot>
+    <ToastRegistryAppID>ToastAppID</ToastRegistryAppID>
+    <ToastActions>
+        <ToastAction>
+            <ActionID>ToastComplete</ActionID>
+            <ActionDescription>The Deployment is complete</ActionDescription>
+            <ToastHello>Update Installation</ToastHello>
+            <ToastTitle>Important information about your laptop or desktop</ToastTitle>
+            <Signature>Sent on behalf of your IT Team</Signature>
+            <EventTitle>Setup Completed</EventTitle>
+            <EventText>The update installation is complete. Thank you for your patience.</EventText>
+            <ButtonTitle>IT Support</ButtonTitle>
+            <ButtonAction>https://www.google.com</ButtonAction>
+            <SnoozeTitle>Snooze</SnoozeTitle>
+            <HeroImage>C:\Program Files\Deploy\Common\Images\UpdateHero.jpg</HeroImage>
+            <BadgeImage>C:\Program Files\Deploy\Common\Images\UpdateBadge.jpg</BadgeImage>
+        </ToastAction>
+        <ToastAction>
+            <ActionID>ToastError</ActionID>
+            <ActionDescription>An error occurred during deployment</ActionDescription>
+            <ToastHello>Update Installation</ToastHello>
+            <ToastTitle>Important information about your laptop or desktop</ToastTitle>
+            <Signature>Sent on behalf of your IT Team</Signature>
+            <EventTitle>Error</EventTitle>
+            <EventText>The update installation completed but errors occurred. Please contact the IT Service Desk for assistance.</EventText>
+            <ButtonTitle>IT Support</ButtonTitle>
+            <ButtonAction>https://www.google.com</ButtonAction>
+            <SnoozeTitle>Snooze</SnoozeTitle>
+            <HeroImage>C:\Program Files\Deploy\Common\Images\UpdateHero.jpg</HeroImage>
+            <BadgeImage>C:\Program Files\Deploy\Common\Images\UpdateBadgeError.jpg</BadgeImage>
+        </ToastAction>
+        <ToastAction>
+            <ActionID>ToastProgress</ActionID>
+            <ActionDescription>Setup is still in progress</ActionDescription>
+            <ToastHello>Update Installation</ToastHello>
+            <ToastTitle>Important information about your laptop or desktop</ToastTitle>
+            <Signature>Sent on behalf of your IT Team</Signature>
+            <EventTitle>Setup in Progress</EventTitle>
+            <EventText>Updates are being installed. Please be patient whilst we complete important installation actions. Please do not reboot your device during the installation.</EventText>
+            <ButtonTitle>IT Support</ButtonTitle>
+            <ButtonAction>https://www.google.com</ButtonAction>
+            <SnoozeTitle>Snooze</SnoozeTitle>
+            <HeroImage>C:\Program Files\Deploy\Common\Images\UpdateHero.jpg</HeroImage>
+            <BadgeImage>C:\Program Files\Deploy\Common\Images\UpdateBadge.jpg</BadgeImage>
+        </ToastAction>
+        <ToastAction>
+            <ActionID>ToastReboot</ActionID>
+            <ActionDescription>Reboot required</ActionDescription>
+            <ToastHello>Update Installation</ToastHello>
+            <ToastTitle>Important information about your laptop or desktop</ToastTitle>
+            <Signature>Sent on behalf of your IT Team</Signature>
+            <EventTitle>Please Reboot</EventTitle>
+            <EventText>Important updates are being installed. Please reboot your laptop or desktop to complete the installation.</EventText>
+            <ButtonTitle>Reboot</ButtonTitle>
+            <ButtonAction>rebootnow:</ButtonAction>
+            <SnoozeTitle>Snooze</SnoozeTitle>
+            <HeroImage>C:\Program Files\Deploy\Common\Images\UpdateHero.jpg</HeroImage>
+            <BadgeImage>C:\Program Files\Deploy\Common\Images\UpdateBadge.jpg</BadgeImage>
+        </ToastAction>
+    </ToastActions>
+</Toast>

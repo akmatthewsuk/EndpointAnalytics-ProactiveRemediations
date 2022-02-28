@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" >
+	<Product Id="*" Name="Update Notifications" Language="1033" Version="1.0.0.0" Manufacturer="To The Cloud And Beyond" UpgradeCode="fef4b677-c87b-4646-b658-01048467660f">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="AppPackage" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+            <ComponentGroupRef Id="Common"/>
+            <ComponentGroupRef Id="Scripts"/>
+            <ComponentGroupRef Id="Installs"/>
+        </Feature>
+        <InstallExecuteSequence>
+            
+        </InstallExecuteSequence>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFiles64Folder">
+                <Directory Id="ORGFOLDER" Name="CT-Deploy">
+                    <Directory Id="COMMONFOLDER" Name="Common" />
+                    <Directory Id="INSTALLFOLDER" Name="UpdateNotification">
+                        <Directory Id="SCRIPTSFOLDER" Name="Scripts" />
+                        <Directory Id="INSTALLSFOLDER" Name="Installs" />
+                    </Directory>
+                </Directory>
+            </Directory>
+		</Directory>
+	</Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+        <Component Id="ProductComponent" Win64="yes" Guid="07807455-8413-4fc7-8860-154b2019390f">
+            <File Id="README" Source="Readme.txt" KeyPath="yes" />
+        </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
